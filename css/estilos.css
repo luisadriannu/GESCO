@@ -1,0 +1,54 @@
+/* LOGIN */
+body {
+  background-color: #1f2937;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container-login {
+  position: relative;
+  margin: 10px;
+  border-radius: 10px;
+  width: 70%;
+  left: 15%;
+  text-align: center;
+}
+.container-login hr {
+  width: 90%;
+}
+.container-inputs {
+  background-color: #343d4d;
+  border-radius: 10px;
+  padding: 25px;
+  width: 60%;
+  position: relative;
+  left: 17%;
+}
+#login {
+  padding: 5px 0;
+  margin: 15px;
+  display: block;
+  background: transparent;
+  width: 93%;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.container-login .container-inputs .elemento input[type="submit"] {
+  margin: 15px;
+  padding: 15px;
+  border: none;
+  width: 60%;
+  background-color: #0088cb;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.logo {
+  width: 70%;
+  position: relative;
+  left: 15%;
+  padding: 15px;
+}
+.logo img {
+  position: relative;
+  left: 37%;
+}
