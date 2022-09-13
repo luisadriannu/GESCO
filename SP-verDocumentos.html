@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="icon" href="imagenes/escudo-Gray.png" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="secretaria_particular.html" class="btn-regresar"
+        ><button class="btn-reg">Regresar</button></a
+      >
+      <div class="contenedor-salir">
+        <a href="SP-info.html"><h5>Secretaria Particular</h5></a>
+        <a href="index.html"><button>Cerrar sesion</button></a>
+      </div>
+    </header>
+    <hr />
+    <nav class="menu-list">
+      <ul class="menu">
+        <li><a href="SP-turnar.html">Turnar</a></li>
+        <li><a href="SP-generarDoc.html">Generar Doc</a></li>
+        <li><a href="SP-verDocumentos.html">Ver documentos</a></li>
+      </ul>
+    </nav>
+
+    <section id="container-ver-docs">
+      <div class="container-ver-docs">
+        <form class="buscar" action="buscar">
+          <input type="search" class="search" />
+        </form>
+
+        <table>
+          <caption>
+            <h2>Documentos</h2>
+          </caption>
+          <tr>
+            <th>No. de oficio</th>
+            <th>Fecha</th>
+            <th>Encargado</th>
+            <th>Departamento</th>
+            <th>Documento</th>
+          </tr>
+          <tr>
+            <td>4789</td>
+            <td>20/08/2022</td>
+            <td>Ing. Mariana Juarez</td>
+            <td>Delegacion administrativa</td>
+            <td>documento1.pdf</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+
+        <form action="guardar-doc-anio">
+          <input
+            type="submit"
+            value="Guardar Documentacion del año"
+            disabled="true"
+          />
+          <input
+            type="checkbox"
+            id="confirm"
+            name="confirm"
+            value="documents"
+          />
+          <label for="confirm">Confirmar</label>
+        </form>
+
+        <form action="CRUD">
+          <input type="submit" value="Borrar" />
+          <input type="submit" value="Editar" />
+
+          <select name="tipoDoc" id="tipoDoc">
+            <option value="internos">Internos</option>
+            <option value="externos">Externos</option>
+            <option value="circulares">Circulares</option>
+          </select>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <hr />
+      <h5>SECRETARIA DE DESARROLLO ECONOMICO</h5>
+    </footer>
+  </body>
+</html>

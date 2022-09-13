@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imagenes/escudo-Gray.png" />
+    <title>Depto Inicio</title>
+    <link rel="stylesheet" href="/css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor-salir">
+        <a href="DEPTO-Info.html"><h5>Depto Informatica</h5></a>
+        <a href="index.html"><button>Cerrar sesion</button></a>
+      </div>
+    </header>
+
+    <hr />
+
+    <nav class="menu-list">
+      <ul class="menu">
+        <li><a href="DEPTO-Turnar.html">Turnar</a></li>
+        <li><a href="DEPTO-generarDocs.html">Generar Doc</a></li>
+        <li><a href="DEPTO-VerDocs.html">Ver documentos</a></li>
+      </ul>
+    </nav>
+
+    <!-- OFICIOS EMITIDOS -->
+    <section id="contenedor-info">
+      <article class="contenedor-oficios">
+        <h3>Oficios emitidos por la Direccion:</h3>
+        <div class="oficios"></div>
+      </article>
+
+      <!-- ALMACENAR OFICIOS -->
+      <article class="contenedor-almacen">
+        <h3>Almacenar oficios</h3>
+        <div class="almacen">
+          <form action="almacenar-oficios">
+            <label for="tipo-oficio">Selecciona el tipo de oficio</label>
+            <select name="tipo-oficio" id="tipo-oficio">
+              <option value="internos">Internos</option>
+              <option value="externos">Externos</option>
+              <option value="circulares">Circulares</option>
+            </select>
+            <label for="no-oficio">No. oficio</label>
+            <input
+              type="number"
+              name="no-oficio"
+              required="true"
+              placeholder="ejem. 20"
+            />
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required="true" />
+            <label for="secretarias-almacen">Elija una opcion</label>
+            <select name="secretarias-almacen" id="oficios-select">
+              <option value="secretarias">Delegacion administrativa</option>
+            </select>
+            <label for="secretarias-almacen">Encargado: </label> <br />
+
+            <label for="archivo">Cargar archivo</label>
+            <br />
+            <input
+              name="archivo"
+              id="archivo"
+              type="file"
+              placeholder="Archivo"
+            />
+          </form>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

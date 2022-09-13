@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="icon" href="imagenes/escudo-Gray.png" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="secretaria_particular.html" class="btn-regresar"
+        ><button class="btn-reg">Regresar</button></a
+      >
+      <div class="contenedor-salir">
+        <a href="SP-info.html"><h5>Secretaria Particular</h5></a>
+        <a href="index.html"><button>Cerrar sesion</button></a>
+      </div>
+    </header>
+    <hr />
+    <nav class="menu-list">
+      <ul class="menu">
+        <li><a href="SP-turnar.html">Turnar</a></li>
+        <li><a href="SP-generarDoc.html">Generar Doc</a></li>
+        <li><a href="SP-verDocumentos.html">Ver documentos</a></li>
+      </ul>
+    </nav>
+
+    <section id="turnar-documentos">
+      <div class="contenedor-turnar-documentos">
+        <h2>Turnar Documentos</h2>
+        <div class="contenedor-turnar-documentos2">
+          <form action="turnar-doc">
+            <h2>Elige un documento</h2>
+            <div class="doc">
+              <p>
+                Aqui iran todos los documentos que se hayan turnado por parte de
+                la secretaria particular
+              </p>
+            </div>
+            <label for="secretarias">Elige un departamento:</label>
+            <select name="secretarias" id="oficios-select">
+              <option value="secretarias">Secretarías</option>
+              <option value="subsecretarias">Subsecretarías</option>
+              <option value="direcciones">Direcciones</option>
+            </select>
+
+            <label for="subdepartamentos">Elija una de las opciones:</label>
+            <select name="subdepartamentos" id="subdepartamentos">
+              <option value="secretarias">Comercio Internacional</option>
+              <option value="subsecretarias">Trabajo y prevision social</option>
+              <option value="secretarias">Desarrollo empresarial</option>
+              <option value="subsecretarias">
+                Gestion de fondos y proyectos
+              </option>
+              <option value="secretarias">Gestion de fondos y proyectos</option>
+              <option value="subsecretarias">Mejora regulatoria</option>
+              <option value="subsecretarias">Delegacion administrativa</option>
+            </select>
+
+            <label for="tipo-oficio">Selecciona el tipo de oficio</label>
+            <select name="tipo-oficio" id="tipo-oficio">
+              <option value="internos">Internos</option>
+              <option value="externos">Externos</option>
+              <option value="circulares">Circulares</option>
+            </select>
+
+            <input type="submit" value="Turnar" class="btn-turnar" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <hr />
+      <h5>SECRETARIA DE DESARROLLO ECONOMICO</h5>
+    </footer>
+  </body>
+</html>

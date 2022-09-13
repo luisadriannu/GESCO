@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imagenes/escudo-Gray.png" />
+    <title>Secretaria Particular</title>
+    <link rel="stylesheet" href="/css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor-salir">
+        <a href="SP-info.html"><h5>Secretaria Particular</h5></a>
+        <a href="index.html"><button>Cerrar sesion</button></a>
+      </div>
+    </header>
+
+    <hr />
+
+    <nav class="menu-list">
+      <ul class="menu">
+        <li><a href="SP-turnar.html">Turnar</a></li>
+        <li><a href="SP-generarDoc.html">Generar Doc</a></li>
+        <li><a href="SP-verDocumentos.html">Ver documentos</a></li>
+      </ul>
+    </nav>
+
+    <!-- OFICIOS EMITIDOS -->
+    <section id="contenedor-info">
+      <article class="contenedor-oficios">
+        <h3>Oficios emitidos:</h3>
+        <div class="oficios"></div>
+        <label for="oficios">Selecciona una de las opciones</label>
+        <form action="departamentos">
+          <select name="departamentos" id="departamentos">
+            <option value="secretarias">Secretarías</option>
+            <option value="subsecretarias">Subsecretarías</option>
+            <option value="direcciones">Direcciones</option>
+          </select>
+        </form>
+      </article>
+
+      <!-- ALMACENAR OFICIOS -->
+      <article class="contenedor-almacen">
+        <h3>Almacenar oficios</h3>
+        <div class="almacen">
+          <form action="almacen-oficios">
+            <fieldset>
+              <legend>Almacenar oficios</legend>
+              <label for="tipo-oficio">Selecciona el tipo de oficio</label>
+              <select name="tipo-oficio" id="tipo-oficio">
+                <option value="internos">Internos</option>
+                <option value="externos">Externos</option>
+                <option value="circulares">Circulares</option>
+              </select>
+              <label for="no-oficio">No. oficio</label>
+              <input
+                type="number"
+                name="no-oficio"
+                required="true"
+                placeholder="ejem. 20"
+              />
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" required="true" />
+              <label for="secretarias-almacen">Elija una opcion</label>
+              <select name="secretarias-almacen" id="oficios-select">
+                <option value="secretarias">Secretarías</option>
+                <option value="subsecretarias">Subsecretarías</option>
+                <option value="direcciones">Direcciones</option>
+              </select>
+              <label for="secretarias-almacen">Encargado: </label>
+
+              <label for="archivo">Selecciona el archivo</label>
+              <input
+                name="archivo"
+                id="archivo"
+                type="file"
+                placeholder="Archivo"
+              />
+
+              <input type="submit" value="Cargar" />
+            </fieldset>
+          </form>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
