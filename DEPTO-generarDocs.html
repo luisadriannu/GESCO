@@ -7,23 +7,55 @@
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="icon" href="imagenes/escudo-Gray.png" />
     <title>Depto GenerarDocs</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <header>
-      <a href="DEPTO-Inicio.html" class="btn-regresar"
-        ><button class="btn-reg">Regresar</button></a
-      >
       <div class="contenedor-salir">
-        <a href="DEPTO-Info.html"><h5>Depto Informatica</h5></a>
-        <a href="index.html"><button>Cerrar sesion</button></a>
+        <a href="DEPTO-Info.html"
+          ><ion-icon name="business-outline"></ion-icon>
+          <h5>Depto Informatica</h5></a
+        >
+        <a href="index.html"
+          ><button class="cerrar-sesion">
+            <ion-icon name="power-outline" class="powerof"></ion-icon> Cerrar
+            sesion
+          </button></a
+        >
       </div>
     </header>
+
     <hr />
+
     <nav class="menu-list">
       <ul class="menu">
-        <li><a href="DEPTO-Turnar.html">Turnar</a></li>
-        <li><a href="DEPTO-generarDocs.html">Generar Doc</a></li>
-        <li><a href="DEPTO-VerDocs.html">Ver documentos</a></li>
+        <li>
+          <a href="DEPTO-Inicio.html"
+            >Inicio <ion-icon name="home-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="DEPTO-Turnar.html"
+            >Turnar <ion-icon name="send-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="DEPTO-generarDocs.html"
+            >Generar Doc <ion-icon name="pencil-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="DEPTO-VerDocs.html"
+            >Ver documentos <ion-icon name="document-text-outline"></ion-icon
+          ></a>
+        </li>
       </ul>
     </nav>
 
@@ -48,12 +80,13 @@
             class="button-doc-deshacer"
             value="Deshacer Cambios"
           />
-          <input type="submit" class="button-doc-save" value="Guardar" />
+          <input type="submit" class="button-doc-save" value="Descargar" />
         </form>
       </div>
     </section>
     <footer class="footer">
       <hr />
+      <img src="imagenes/sedeco.png" alt="SEDECO" width="200px" height="90px" />
       <h5>SECRETARIA DE DESARROLLO ECONOMICO</h5>
     </footer>
   </body>

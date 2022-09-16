@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="icon" href="imagenes/escudo-Gray.png" />
-    <title>Secretaria particular - generarDoc</title>
+    <title>Documentos Anuales</title>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -59,29 +59,56 @@
       </ul>
     </nav>
 
-    <!-- GENERAR DOC -->
-    <section id="container-generar-doc">
-      <div class="contenedor-doc">
-        <h2>Generar documento</h2>
-        <form action="generar-doc">
-          <label for="tipoDoc">Elija el tipo de documento</label>
-          <br />
-          <select name="tipoDoc" id="tipoDoc">
-            <option value="internos">Internos</option>
-            <option value="externos">Externos</option>
-            <option value="circulares">Circulares</option>
-          </select>
-
-          <!-- PLANTILLAS -->
-          <div class="plantillas"></div>
-
-          <input
-            type="submit"
-            class="button-doc-deshacer"
-            value="Deshacer Cambios"
-          />
-          <input type="submit" class="button-doc-save" value="Descargar" />
+    <section id="container-ver-docs">
+      <div class="container-ver-docs">
+        <form class="buscar" action="buscar">
+          <input type="search" class="search" placeholder="Buscar" />
         </form>
+
+        <table>
+          <caption>
+            <h2>Documentaciones guardadas por cada año</h2>
+          </caption>
+          <tr>
+            <th>No. de oficio</th>
+            <th>Fecha</th>
+            <th>Encargado</th>
+            <th>Direccion</th>
+            <th>Documento</th>
+          </tr>
+          <tr>
+            <td>49</td>
+            <td>22/11/2022</td>
+            <td>Lic. Mariana Perez</td>
+            <td>Inversiones</td>
+            <td>
+              <a href="docs/Solicitud 250 correos Finanzas.pdf"
+                >documento1.pdf</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
       </div>
     </section>
 

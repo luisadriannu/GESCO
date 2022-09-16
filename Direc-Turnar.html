@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="icon" href="imagenes/escudo-Gray.png" />
-    <title>SP Turnar</title>
+    <title>Direccion turnar</title>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -19,9 +19,9 @@
   <body>
     <header>
       <div class="contenedor-salir">
-        <a href="SP-info.html"
+        <a href="Direc-info.html"
           ><ion-icon name="business-outline"></ion-icon>
-          <h5>Secretaria particular</h5></a
+          <h5>Direccion</h5></a
         >
         <a href="index.html"
           ><button class="cerrar-sesion">
@@ -37,29 +37,28 @@
     <nav class="menu-list">
       <ul class="menu">
         <li>
-          <a href="SP-Inicio.html"
+          <a href="Direc-Inicio.html"
             >Inicio <ion-icon name="home-outline"></ion-icon
           ></a>
         </li>
         <li>
-          <a href="SP-turnar.html"
+          <a href="Direc-Turnar.html"
             >Turnar <ion-icon name="send-outline"></ion-icon
           ></a>
         </li>
         <li>
-          <a href="SP-generarDoc.html"
+          <a href="Direc-generarDoc.html"
             >Generar Doc <ion-icon name="pencil-outline"></ion-icon
           ></a>
         </li>
         <li>
-          <a href="SP-verDocumentos.html"
+          <a href="Direc-VerDocs.html"
             >Ver documentos <ion-icon name="document-text-outline"></ion-icon
           ></a>
         </li>
       </ul>
     </nav>
 
-    <!-- TURNAR -->
     <section id="turnar-documentos">
       <div class="contenedor-turnar-documentos">
         <h1>Turnar Documentos</h1>
@@ -70,36 +69,30 @@
               <p>Aqui iran todos los documentos</p>
             </div>
 
-            <div class="contenedor-form-turnarSP">
+            <div class="contenedor-form-turnar">
               <label for="departamentos"
-                >Elija el departamento:
+                >Elija la direccion:
                 <select name="departamentos" id="subdepartamentos">
-                  <option value="secretarias">Secretarias</option>
-                  <option value="subsecretarias">Subsecretarias</option>
-                  <option value="direcciones">Direcciones</option>
-                </select>
-              </label>
-
-              <label for="tipo-oficio" class="tipo-oficio"
-                >Selecciona una de las opciones:
-                <select name="tipo-oficio" id="tipo-oficio">
-                  <option value="comercio">Comercio internacional</option>
-                  <option value="trabajo-prevision">
-                    Trabajo y prevision social
+                  <option value="recursos-humanos">Recursos humanos</option>
+                  <option value="recursos-financieros">
+                    Recursos financieros
                   </option>
+                  <option value="recursos-comerciales">
+                    Recursos materiales
+                  </option>
+                  <option value="informatica">Informatica</option>
                 </select>
               </label>
 
               <label for="tipo-oficio" class="tipo-oficio"
-                >Elige el tipo de documento
+                >Selecciona el tipo de oficio
                 <select name="tipo-oficio" id="tipo-oficio">
                   <option value="internos">Internos</option>
                   <option value="externos">Externos</option>
                   <option value="circulares">Circulares</option>
                 </select>
               </label>
-              <br />
-              <br />
+
               <label for="archivo" class="cargar-archivo"
                 >Cargar archivo:
                 <input

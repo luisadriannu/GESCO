@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imagenes/escudo-Gray.png" />
+    <title>Super Administrador</title>
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="contenedor-salir">
+        <a href="SA-Info.html"
+          ><ion-icon name="business-outline"></ion-icon>
+          <h5>Administrador</h5></a
+        >
+        <a href="index.html"
+          ><button class="cerrar-sesion">
+            <ion-icon name="power-outline" class="powerof"></ion-icon> Cerrar
+            sesion
+          </button></a
+        >
+      </div>
+    </header>
+
+    <hr />
+
+    <nav class="menu-list">
+      <ul class="menu">
+        <li>
+          <a href="SA-Inicio.html"
+            >Inicio <ion-icon name="home-outline"></ion-icon></ion-icon
+          ></a>
+          <a href="SA-secretarias.html"
+            >Secretarias <ion-icon name="business-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="SA-subsecretarias.html"
+            >Subsecretarias <ion-icon name="desktop-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="SA-direcciones.html"
+            >Direcciones <ion-icon name="briefcase-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="SA-subdirecciones.html"
+            >Subdirecciones <ion-icon name="easel-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="SA-departamentos.html"
+            >Departamentos <ion-icon name="newspaper-outline"></ion-icon
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <br />
+
+    <!-- FORMULARIO -->
+    <section id="contenedor-info">
+      <div class="contenedor-altasDepto">
+        <div class="contenedor-altasDepto2">
+          <form action="altas-depto">
+            <label for="nombre-depto">Nombre del departamento</label>
+            <input
+              type="text"
+              id="nombre-depto"
+              name="nombre-depto"
+              placeholder="Escribe el nombre"
+              required="true"
+            />
+            <br />
+            <br>
+            <label for="nombre-encargado">Nombre del encargado</label>
+            <input
+              type="text"
+              id="nombre-encargado"
+              name="nombre-encargado"
+              placeholder="Escribe el nombre"
+              required="true"
+            />
+            <br />
+            <br>
+            <label for="correo">Correo electronico</label>
+            <input
+              type="text"
+              id="correo"
+              name="correo"
+              placeholder="Escribe el correo"
+              required="true"
+            />
+            <br />
+            <br>
+            <label for="asig-contrasenia">Contraseña</label>
+            <input
+              type="password"
+              id="asig-contrasenia"
+              name="asig-contrasenia"
+              placeholder="Escribe la contraseña"
+              required="true"
+            />
+            <br />
+            <br>
+            <!-- SUBDIRECCION -->
+            <label for="opc-subdireccion"
+              >Subdireccion en la que se encontrara</label
+            >
+            <select name="opc-subdireccion" id="opc-subdireccion">
+              <option value="Inversiones estrategicas">
+                Inversiones estrategicas
+              </option>
+              <option value="Propocion de empleo">Propocion de empleo</option>
+            </select>
+            <label for="check-subdirec">No tiene subdireccion</label>
+            <input type="checkbox" id="check-subdirec" />
+
+            <br />
+            <br>
+            <!-- DIRECCION -->
+            <label for="opc-direccion">Direccion en la que se encontrara</label>
+            <select name="opc-direccion" id="opc-direccion">
+              <option value="Delegacion administrativa">
+                Delegacion administrativa
+              </option>
+              <option value="Propocion de empleo">Mejora regulatoria</option>
+              <option value="Gestion de fondos de proyectos">
+                Gestion de fondos de proyectos
+              </option>
+              <option value="Desarrollo empresarial y economia social">
+                Desarrollo empresarial y economia social
+              </option>
+            </select>
+            <br />
+            <br>
+            <!-- SUBSECRETARIA -->
+            <label for="opc-subsecretaria"
+              >Subsecretaria en la que se encontrara</label
+            >
+            <select name="opc-subsecretaria" id="opc-subsecretaria">
+              <option value="De trabajo y prevision social">
+                De trabajo y prevision social
+              </option>
+              <option value="De comercio internacional (TMEC)">
+                De comercio internacional (TMEC)
+              </option>
+            </select>
+            <label for="check-sub">No tiene subsecretaria</label>
+            <input type="checkbox" id="check-sub" />
+            <br />
+            <br>
+            <!-- DEPARTAMENTOS -->
+            <label for="opc-datos">Elija que quiera dar de alta</label>
+            <select name="opc-datos" id="opc-datos">
+              <option value="Secretaria">Secretaria</option>
+              <option value="Subsecretaria">Subsecretaria</option>
+              <option value="Direccion">Direccion</option>
+              <option value="Subdireccion">Subdireccion</option>
+              <option value="Departamento">Departamento</option>
+            </select>
+          </form>
+          <img
+            class="escudo-sedeco-admin"
+            src="imagenes/escudo-Gray.png"
+            alt="SEDECO"
+            width="200px"
+            height="200px"
+          />
+          <form action="guardar">
+            <input type="submit" value="Guardar" class="btn-admin-guardar" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <hr />
+      <img src="imagenes/sedeco.png" alt="SEDECO" width="200px" height="90px" />
+      <h5>SECRETARIA DE DESARROLLO ECONOMICO</h5>
+    </footer>
+  </body>
+</html>

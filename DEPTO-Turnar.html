@@ -7,29 +7,61 @@
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="icon" href="imagenes/escudo-Gray.png" />
     <title>Depto Turnar</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <header>
-      <a href="DEPTO-Inicio.html" class="btn-regresar"
-        ><button class="btn-reg">Regresar</button></a
-      >
       <div class="contenedor-salir">
-        <a href="DEPTO-Info.html"><h5>Depto Informatica</h5></a>
-        <a href="index.html"><button>Cerrar sesion</button></a>
+        <a href="DEPTO-Info.html"
+          ><ion-icon name="business-outline"></ion-icon>
+          <h5>Depto Informatica</h5></a
+        >
+        <a href="index.html"
+          ><button class="cerrar-sesion">
+            <ion-icon name="power-outline" class="powerof"></ion-icon> Cerrar
+            sesion
+          </button></a
+        >
       </div>
     </header>
+
     <hr />
     <nav class="menu-list">
       <ul class="menu">
-        <li><a href="DEPTO-Turnar.html">Turnar</a></li>
-        <li><a href="DEPTO-generarDocs.html">Generar Doc</a></li>
-        <li><a href="DEPTO-VerDocs.html">Ver documentos</a></li>
+        <li>
+          <a href="DEPTO-Inicio.html"
+            >Inicio <ion-icon name="home-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="DEPTO-Turnar.html"
+            >Turnar <ion-icon name="send-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="DEPTO-generarDocs.html"
+            >Generar Doc <ion-icon name="pencil-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="DEPTO-VerDocs.html"
+            >Ver documentos <ion-icon name="document-text-outline"></ion-icon
+          ></a>
+        </li>
       </ul>
     </nav>
 
+    <!-- TURNAR -->
     <section id="turnar-documentos">
       <div class="contenedor-turnar-documentos">
-        <h2>Turnar Documentos</h2>
+        <h1>Turnar Documentos</h1>
         <div class="contenedor-turnar-documentos2">
           <form action="turnar-doc">
             <h2>Elige un documento</h2>
@@ -37,17 +69,34 @@
               <p>Aqui iran todos los documentos</p>
             </div>
 
-            <label for="departamentos">Elija la direccion:</label>
-            <select name="departamentos" id="subdepartamentos">
-              <option value="secretarias">Delegacion administrativa</option>
-            </select>
+            <div class="contenedor-form-turnar">
+              <label for="departamentos"
+                >Elija la direccion:
+                <select name="departamentos" id="subdepartamentos">
+                  <option value="recursos-humanos">
+                    Delegacion administrativa
+                  </option>
+                </select>
+              </label>
 
-            <label for="tipo-oficio">Selecciona el tipo de oficio</label>
-            <select name="tipo-oficio" id="tipo-oficio">
-              <option value="internos">Internos</option>
-              <option value="externos">Externos</option>
-              <option value="circulares">Circulares</option>
-            </select>
+              <label for="tipo-oficio" class="tipo-oficio"
+                >Selecciona el tipo de oficio
+                <select name="tipo-oficio" id="tipo-oficio">
+                  <option value="internos">Internos</option>
+                  <option value="externos">Externos</option>
+                  <option value="circulares">Circulares</option>
+                </select>
+              </label>
+
+              <label for="archivo" class="cargar-archivo"
+                >Cargar archivo:
+                <input
+                  name="archivo"
+                  id="archivo"
+                  type="file"
+                  placeholder="Archivo"
+              /></label>
+            </div>
 
             <input type="submit" value="Turnar" class="btn-turnar" />
           </form>
@@ -57,6 +106,7 @@
 
     <footer class="footer">
       <hr />
+      <img src="imagenes/sedeco.png" alt="SEDECO" width="200px" height="90px" />
       <h5>SECRETARIA DE DESARROLLO ECONOMICO</h5>
     </footer>
   </body>

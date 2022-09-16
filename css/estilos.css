@@ -4,11 +4,61 @@ body {
   background-color: #d3d3d3;
 }
 hr {
+  height: 1px;
+  width: 98%;
   background-color: black;
 }
 a {
   text-decoration: none;
 }
+button {
+  cursor: pointer;
+  font-size: 15px;
+}
+.cerrar-sesion {
+  color: red;
+  border: none;
+  background-color: #d3d3d3;
+}
+.powerof {
+  width: 14px;
+  height: 14px;
+}
+/* MENU NAVEGACION */
+.menu-list {
+  border-radius: 8px;
+  width: 100%;
+  overflow: auto;
+  margin: auto;
+}
+.menu li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 18px;
+}
+
+.menu li a:hover {
+  color: #4a001f;
+  transition: 0.3s;
+}
+
+/* FOOTER */
+.footer {
+  position: relative;
+  text-align: center;
+  top: 45px;
+  width: 100%;
+  overflow: auto;
+  margin: auto;
+}
+
+/* LOGIN */
 .container-login {
   position: relative;
   margin: 10px;
@@ -65,16 +115,6 @@ a {
   border: 1px solid #4a001f;
   color: black;
 }
-.logo {
-  width: 70%;
-  position: relative;
-  left: 15%;
-  padding: 15px;
-}
-.logo img {
-  position: relative;
-  left: 37%;
-}
 
 /* SECRETARIA PARTICULAR */
 header {
@@ -97,26 +137,6 @@ header input[type="button"] {
 .contenedor-salir a h5 {
   font-size: 1rem;
 }
-.menu-list {
-  border-radius: 8px;
-  width: 80%;
-  overflow: auto;
-  margin: auto;
-}
-.menu li {
-  list-style: none;
-  display: inline-block;
-  padding: 5px;
-}
-.menu li a {
-  text-decoration: none;
-  color: gray;
-  font-size: 18px;
-}
-.menu li a:hover {
-  color: #4a001f;
-  transition: 0.3s;
-}
 
 .contenedor-oficios {
   width: 80%;
@@ -126,6 +146,7 @@ header input[type="button"] {
 }
 .oficios {
   border: 1px solid black;
+  border-radius: 5px;
   height: 100px;
   background-color: white;
 }
@@ -139,23 +160,28 @@ header input[type="button"] {
   overflow: auto;
 }
 .almacen {
+  border-radius: 5px;
   background-color: white;
-  box-shadow: 2px 2px 2px 2px gray;
+  height: 290px;
 }
 
 /* TURNAR DOCUMENTOS - SP*/
 .contenedor-turnar-documentos {
   width: 80%;
-  height: 20%;
   margin: auto;
   overflow: auto;
+  height: 450px;
 }
 .contenedor-turnar-documentos h1 {
   text-align: center;
 }
 .contenedor-turnar-documentos2 {
-  border: 1px solid black;
+  height: 280px;
   padding: 15px;
+}
+.contenedor-turnar-documentos2 .tipo-oficio {
+  position: relative;
+  left: 15px;
 }
 .doc {
   background-color: white;
@@ -167,10 +193,12 @@ header input[type="button"] {
   background-color: #4a001f;
   color: white;
   border-radius: 5px;
-  width: 10%;
-  height: 40px;
+  width: 18%;
+  height: 45px;
   cursor: pointer;
   margin: 15px;
+  position: relative;
+  left: 80%;
 }
 .btn-turnar:hover {
   background-color: white;
@@ -179,16 +207,8 @@ header input[type="button"] {
   color: black;
 }
 
-/* FOOTER */
-.footer {
-  position: relative;
-  text-align: center;
-  top: 45px;
-}
-
 /* GENERAR DOC - SP*/
 .contenedor-doc {
-  border: 1px solid black;
   width: 80%;
   height: 20%;
   margin: auto;
@@ -290,4 +310,102 @@ caption {
 .almacen {
   padding: 15px;
   border: 1px solid black;
+  font-size: 16px;
+}
+.btn-cargar {
+  margin: 15px;
+  background-color: #4a001f;
+  color: white;
+  border-radius: 5px;
+  width: 18%;
+  height: 45px;
+  cursor: pointer;
+  position: relative;
+  left: 76.5%;
+  bottom: 10px;
+}
+.btn-cargar:hover {
+  background-color: white;
+  transition: 0.4s;
+  border: 1px solid #4a001f;
+  color: black;
+}
+.content-form1 {
+  width: 90%;
+  height: 230px;
+  overflow: auto;
+  margin: auto;
+}
+.escudo-sedeco {
+  position: absolute;
+  bottom: 26%;
+  left: 66%;
+}
+.escudo-sedecoSP {
+  position: absolute;
+  bottom: 21%;
+  left: 66%;
+}
+.content-form1 label {
+  display: block;
+}
+
+/* ADMINISTRADOR */
+#contenedor-info {
+  width: 80%;
+  overflow: auto;
+  margin: auto;
+  color: #4a001f;
+}
+.contenedor-altasDepto {
+  padding: 20px;
+  height: 500px;
+  position: relative;
+}
+.contenedor-altasDepto2 {
+  width: 90%;
+  height: 400px;
+  padding: 15px;
+  overflow: auto;
+  margin: auto;
+
+  border: 2px solid black;
+  border-radius: 8px;
+}
+.docs-anuales {
+  float: right;
+}
+
+/* turnar */
+.contenedor-form-turnar .cargar-archivo {
+  position: relative;
+  left: 3%;
+}
+.contenedor-form-turnar {
+  padding: 20px;
+}
+.contenedor-form-turnarSP {
+}
+.escudo-sedeco-admin {
+  position: absolute;
+  left: 75%;
+  bottom: 280px;
+}
+.btn-admin-guardar {
+  margin: 15px;
+  background-color: #4a001f;
+  color: white;
+  border-radius: 5px;
+  width: 18%;
+  height: 45px;
+  cursor: pointer;
+  position: relative;
+  left: 78%;
+  bottom: 65px;
+}
+.btn-admin-guardar:hover {
+  background-color: white;
+  transition: 0.4s;
+  border: 1px solid #4a001f;
+  color: black;
 }

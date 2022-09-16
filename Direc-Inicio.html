@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="imagenes/escudo-Gray.png" />
-    <title>Secretaria Particular</title>
+    <title>Direccion inicio</title>
     <link rel="stylesheet" href="/css/estilos.css" />
     <script
       type="module"
@@ -19,9 +19,9 @@
   <body>
     <header>
       <div class="contenedor-salir">
-        <a href="SP-info.html"
+        <a href="Direc-info.html"
           ><ion-icon name="business-outline"></ion-icon>
-          <h5>Secretaria particular</h5></a
+          <h5>Direccion</h5></a
         >
         <a href="index.html"
           ><button class="cerrar-sesion">
@@ -37,22 +37,22 @@
     <nav class="menu-list">
       <ul class="menu">
         <li>
-          <a href="SP-Inicio.html"
+          <a href="Direc-Inicio.html"
             >Inicio <ion-icon name="home-outline"></ion-icon
           ></a>
         </li>
         <li>
-          <a href="SP-turnar.html"
+          <a href="Direc-Turnar.html"
             >Turnar <ion-icon name="send-outline"></ion-icon
           ></a>
         </li>
         <li>
-          <a href="SP-generarDoc.html"
+          <a href="Direc-generarDoc.html"
             >Generar Doc <ion-icon name="pencil-outline"></ion-icon
           ></a>
         </li>
         <li>
-          <a href="SP-verDocumentos.html"
+          <a href="Direc-VerDocs.html"
             >Ver documentos <ion-icon name="document-text-outline"></ion-icon
           ></a>
         </li>
@@ -62,18 +62,8 @@
     <!-- OFICIOS EMITIDOS -->
     <section id="contenedor-info">
       <article class="contenedor-oficios">
-        <h3>Oficios emitidos:</h3>
+        <h3>Oficios emitidos por la secretaria particular:</h3>
         <div class="oficios"></div>
-        <label for="oficios"
-          >Elija el departamento para ver los oficios que ha emitido:
-        <form action="departamentos">
-          <select name="departamentos" id="departamentos">
-            <option value="secretarias">Secretarías</option>
-            <option value="subsecretarias">Subsecretarías</option>
-            <option value="direcciones">Direcciones</option>
-          </select>
-          </label>
-        </form>
       </article>
 
       <!-- ALMACENAR OFICIOS -->
@@ -103,7 +93,7 @@
               <img
                 src="imagenes/escudo-Gray.png"
                 alt="escudo"
-                class="escudo-sedecoSP"
+                class="escudo-sedeco"
                 width="200px"
                 height="200px"
               />
@@ -115,23 +105,16 @@
               <label for="secretarias-almacen"
                 >Elija una opcion:
                 <select name="secretarias-almacen" id="oficios-select">
-                  <option value="secretarias">Secretarias</option>
-                  <option value="subsecretarias">Subsecretarias</option>
-                  <option value="Direcciones">Direcciones</option>
+                  <option value="recursos-humanos">Recursos humanos</option>
+                  <option value="recursos-financieros">
+                    Recursos financieros
+                  </option>
+                  <option value="recursos-comerciales">
+                    Recursos materiales
+                  </option>
+                  <option value="informatica">Informatica</option>
                 </select>
               </label>
-
-              <!-- 
-                COLOCAR NOMBRE PARTICULAR DE CADA UNO DE LOS DEPARTAMENTOS
-                <label for="secretarias-almacen"
-                >Elija una opcion:
-                <select name="secretarias-almacen" id="oficios-select">
-                  <option value="secretarias">Secretarias</option>
-                  <option value="subsecretarias">Subsecretarias</option>
-                  <option value="Direcciones">Direcciones</option>
-                </select>
-              </label> -->
-
               <label for="secretarias-almacen">Encargado:</label>
               <br />
               <label for="archivo"
@@ -150,7 +133,7 @@
       </article>
     </section>
 
-   <footer class="footer">
+    <footer class="footer">
       <hr />
       <img src="imagenes/sedeco.png" alt="SEDECO" width="200px" height="90px" />
       <h5>SECRETARIA DE DESARROLLO ECONOMICO</h5>

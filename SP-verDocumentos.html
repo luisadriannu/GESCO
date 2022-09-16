@@ -6,31 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="icon" href="imagenes/escudo-Gray.png" />
-    <title>Document</title>
+    <title>SP-VerDocs</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <header>
-      <a href="secretaria_particular.html" class="btn-regresar"
-        ><button class="btn-reg">Regresar</button></a
-      >
       <div class="contenedor-salir">
-        <a href="SP-info.html"><h5>Secretaria Particular</h5></a>
-        <a href="index.html"><button>Cerrar sesion</button></a>
+        <a href="SP-info.html"
+          ><ion-icon name="business-outline"></ion-icon>
+          <h5>Secretaria particular</h5></a
+        >
+        <a href="index.html"
+          ><button class="cerrar-sesion">
+            <ion-icon name="power-outline" class="powerof"></ion-icon> Cerrar
+            sesion
+          </button></a
+        >
       </div>
     </header>
+
     <hr />
+
     <nav class="menu-list">
       <ul class="menu">
-        <li><a href="SP-turnar.html">Turnar</a></li>
-        <li><a href="SP-generarDoc.html">Generar Doc</a></li>
-        <li><a href="SP-verDocumentos.html">Ver documentos</a></li>
+        <li>
+          <a href="SP-Inicio.html"
+            >Inicio <ion-icon name="home-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="SP-turnar.html"
+            >Turnar <ion-icon name="send-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="SP-generarDoc.html"
+            >Generar Doc <ion-icon name="pencil-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="SP-verDocumentos.html"
+            >Ver documentos <ion-icon name="document-text-outline"></ion-icon
+          ></a>
+        </li>
       </ul>
     </nav>
 
     <section id="container-ver-docs">
       <div class="container-ver-docs">
         <form class="buscar" action="buscar">
-          <input type="search" class="search" />
+          <input type="search" class="search" placeholder="Buscar" />
         </form>
 
         <table>
@@ -80,29 +112,64 @@
             value="Guardar Documentacion del año"
             disabled="true"
           />
-          <input
-            type="checkbox"
-            id="confirm"
-            name="confirm"
-            value="documents"
-          />
-          <label for="confirm">Confirmar</label>
+
+          <label for="confirm"
+            >Confirmar
+            <input
+              type="checkbox"
+              id="confirm"
+              name="confirm"
+              value="documents"
+            />
+          </label>
         </form>
 
+        <br />
+        <!-- Botones editar y borrar -->
         <form action="CRUD">
           <input type="submit" value="Borrar" />
           <input type="submit" value="Editar" />
 
-          <select name="tipoDoc" id="tipoDoc">
-            <option value="internos">Internos</option>
-            <option value="externos">Externos</option>
-            <option value="circulares">Circulares</option>
-          </select>
+          <label for="tipoDoc"
+            >Selecciona el tipo de oficio:
+            <select name="tipoDoc" id="tipoDoc">
+              <option value="internos">Internos</option>
+              <option value="externos">Externos</option>
+              <option value="circulares">Circulares</option>
+            </select>
+          </label>
+
+          <label for="departamento"
+            >Selecciona el departamento:
+            <select name="departamentoSP" id="departamentoSP">
+              <option value="secretarias">Secretarias</option>
+              <option value="subsecretarias">Subsecretarias</option>
+              <option value="Direcciones">Direcciones</option>
+            </select>
+          </label>
+
+          <label for="nombre-depto-SP"
+            >Selecciona el departamento en especifico:
+            <select name="nombre-depto-SP" id="nombre-depto-SP">
+              <option value="comercio">Comercio internacional</option>
+              <option value="prevision-social">
+                Trabajo y prevision social
+              </option>
+            </select>
+          </label>
         </form>
+        <br />
+        <div class="docs-anuales">
+          <a href="SP-VerDocsAnuales.html"
+            ><button>Ver documentos anuales</button></a
+          >
+        </div>
       </div>
     </section>
+
     <footer class="footer">
       <hr />
+      <img src="imagenes/sedeco.png" alt="SEDECO" width="200px" height="90px" />
       <h5>SECRETARIA DE DESARROLLO ECONOMICO</h5>
     </footer>
   </body>

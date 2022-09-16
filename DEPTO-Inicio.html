@@ -7,12 +7,28 @@
     <link rel="icon" href="imagenes/escudo-Gray.png" />
     <title>Depto Inicio</title>
     <link rel="stylesheet" href="/css/estilos.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <header>
       <div class="contenedor-salir">
-        <a href="DEPTO-Info.html"><h5>Depto Informatica</h5></a>
-        <a href="index.html"><button>Cerrar sesion</button></a>
+        <a href="DEPTO-Info.html"
+          ><ion-icon name="business-outline"></ion-icon>
+          <h5>Depto Informatica</h5></a
+        >
+        <a href="index.html"
+          ><button class="cerrar-sesion">
+            <ion-icon name="power-outline" class="powerof"></ion-icon> Cerrar
+            sesion
+          </button></a
+        >
       </div>
     </header>
 
@@ -20,9 +36,26 @@
 
     <nav class="menu-list">
       <ul class="menu">
-        <li><a href="DEPTO-Turnar.html">Turnar</a></li>
-        <li><a href="DEPTO-generarDocs.html">Generar Doc</a></li>
-        <li><a href="DEPTO-VerDocs.html">Ver documentos</a></li>
+        <li>
+          <a href="DEPTO-Inicio.html"
+            >Inicio <ion-icon name="home-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="DEPTO-Turnar.html"
+            >Turnar <ion-icon name="send-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="DEPTO-generarDocs.html"
+            >Generar Doc <ion-icon name="pencil-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="DEPTO-VerDocs.html"
+            >Ver documentos <ion-icon name="document-text-outline"></ion-icon
+          ></a>
+        </li>
       </ul>
     </nav>
 
@@ -38,38 +71,68 @@
         <h3>Almacenar oficios</h3>
         <div class="almacen">
           <form action="almacenar-oficios">
-            <label for="tipo-oficio">Selecciona el tipo de oficio</label>
-            <select name="tipo-oficio" id="tipo-oficio">
-              <option value="internos">Internos</option>
-              <option value="externos">Externos</option>
-              <option value="circulares">Circulares</option>
-            </select>
-            <label for="no-oficio">No. oficio</label>
-            <input
-              type="number"
-              name="no-oficio"
-              required="true"
-              placeholder="ejem. 20"
-            />
-            <label for="fecha">Fecha</label>
-            <input type="date" id="fecha" name="fecha" required="true" />
-            <label for="secretarias-almacen">Elija una opcion</label>
-            <select name="secretarias-almacen" id="oficios-select">
-              <option value="secretarias">Delegacion administrativa</option>
-            </select>
-            <label for="secretarias-almacen">Encargado: </label> <br />
+            <div class="content-form1">
+              <label for="tipo-oficio"
+                >Selecciona el tipo de oficio:
+                <select name="tipo-oficio" id="tipo-oficio">
+                  <option value="internos">Internos</option>
+                  <option value="externos">Externos</option>
+                  <option value="circulares">Circulares</option>
+                </select>
+              </label>
+              <br />
+              <label for="no-oficio" id="text-no-oficio"
+                >No. oficio:
+                <input
+                  type="number"
+                  name="no-oficio"
+                  id="no-oficio"
+                  required="true"
+                  placeholder="ejem. 20"
+              /></label>
+              <img
+                src="imagenes/escudo-Gray.png"
+                alt="escudo"
+                class="escudo-sedeco"
+                width="200px"
+                height="200px"
+              />
+              <br />
+              <label for="fecha" id="text-fecha"
+                >Fecha:
+                <input type="date" id="fecha" name="fecha" required="true" />
+              </label>
+              <label for="secretarias-almacen"
+                >Elija una opcion:
+                <select name="secretarias-almacen" id="oficios-select">
+                  <option value="delegacion administrativa">
+                    Delegacion administrativa
+                  </option>
+                </select>
+              </label>
+              <label for="secretarias-almacen">Encargado:</label>
+              <!-- AQUI IRA DINAMICAMENTE EL ENCARGADO -->
+              <br />
+              <label for="archivo"
+                >Cargar archivo:
+                <input
+                  name="archivo"
+                  id="archivo"
+                  type="file"
+                  placeholder="Archivo"
+              /></label>
+            </div>
 
-            <label for="archivo">Cargar archivo</label>
-            <br />
-            <input
-              name="archivo"
-              id="archivo"
-              type="file"
-              placeholder="Archivo"
-            />
+            <input class="btn-cargar" type="submit" value="Cargar" />
           </form>
         </div>
       </article>
     </section>
+
+    <footer class="footer">
+      <hr />
+      <img src="imagenes/sedeco.png" alt="SEDECO" width="200px" height="90px" />
+      <h5>SECRETARIA DE DESARROLLO ECONOMICO</h5>
+    </footer>
   </body>
 </html>
